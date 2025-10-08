@@ -11,7 +11,8 @@ import c from '../app/assets/svg/skills/c.svg';
 import canva from '../app/assets/svg/skills/canva.svg';
 import capacitorjs from '../app/assets/svg/skills/capacitorjs.svg';
 import coffeescript from '../app/assets/svg/skills/coffeescript.svg';
-import cplusplus from '../app/assets/svg/skills/cplusplus.svg';
+// Using placeholder SVGs for missing files
+import cplusplus from '../public/png/c++.jpg';
 import csharp from '../app/assets/svg/skills/csharp.svg';
 import css from '../app/assets/svg/skills/css.svg';
 import dart from '../app/assets/svg/skills/dart.svg';
@@ -31,7 +32,7 @@ import haxe from '../app/assets/svg/skills/haxe.svg';
 import html from '../app/assets/svg/skills/html.svg';
 import illustrator from '../app/assets/svg/skills/illustrator.svg';
 import ionic from '../app/assets/svg/skills/ionic.svg';
-import java from '../app/assets/svg/skills/java.svg';
+import java from '../public/png/java.png';
 import javascript from '../app/assets/svg/skills/javascript.svg';
 import julia from '../app/assets/svg/skills/julia.svg';
 import kotlin from '../app/assets/svg/skills/kotlin.svg';

@@ -1,10 +1,8 @@
 "use client";
 // @flow strict
 import { isValidEmail } from "@/utils/check-email";
-import axios from "axios";
 import { useState } from "react";
 import { TbMailForward } from "react-icons/tb";
-import { toast } from "react-toastify";
 
 function ContactForm() {
   const [error, setError] = useState({ email: false, required: false });
@@ -21,37 +19,50 @@ function ContactForm() {
     }
   };
 
-  const handleSendMail = async (e) => {
+  const handleSendMail = (e) => {
+    // Prevent default form submission behavior (if this handler is attached to a form)
     e.preventDefault();
 
+    const recipientEmail = "alexofficialfsdeveloper@gmail.com";
+
+    // Basic client-side validation check
     if (!userInput.email || !userInput.message || !userInput.name) {
-      setError({ ...error, required: true });
-      return;
-    } else if (error.email) {
-      return;
-    } else {
-      setError({ ...error, required: false });
-    };
+        // Assuming setError and error state are defined elsewhere for UI feedback
+        setError({ ...error, required: true }); 
+        return;
+    }
+    
+    // Check for existing email validation error (assuming 'error.email' is handled elsewhere)
+    if (error.email) {
+        return;
+    }
 
-    try {
-      setIsLoading(true);
-      const res = await axios.post(
-        `${process.env.NEXT_PUBLIC_APP_URL}/api/contact`,
-        userInput
-      );
+    // 1. Construct the Subject and Body
+    const subject = `Portfolio Contact from ${userInput.name}`;
+    const body = `Sender Email: ${userInput.email}\n\n---\n\nMessage:\n${userInput.message}`;
 
-      toast.success("Message sent successfully!");
-      setUserInput({
+    // 2. URL-encode the subject and body to ensure special characters (like spaces and newlines) 
+    // are correctly handled in the mailto link.
+    const encodedSubject = encodeURIComponent(subject);
+    const encodedBody = encodeURIComponent(body);
+
+    // 3. Create the final mailto link
+    const mailtoLink = `mailto:${recipientEmail}?subject=${encodedSubject}&body=${encodedBody}`;
+
+    // 4. Execute the link to open the user's default email client
+    window.location.href = mailtoLink;
+
+    // 5. Reset the form inputs 
+    // (Note: The message is not technically "sent" yet, only prepped in the email client.)
+    setUserInput({
         name: "",
         email: "",
         message: "",
-      });
-    } catch (error) {
-      toast.error(error?.response?.data?.message);
-    } finally {
-      setIsLoading(false);
-    };
-  };
+    });
+
+    // Optionally, clear the required error status
+    setError({ ...error, required: false });
+};
 
   return (
     <div>
@@ -70,7 +81,7 @@ function ContactForm() {
               onBlur={checkRequired}
               value={userInput.name}
             />
-          </div>
+          </div> 
 
           <div className="flex flex-col gap-2">
             <label className="text-base">Your Email: </label>

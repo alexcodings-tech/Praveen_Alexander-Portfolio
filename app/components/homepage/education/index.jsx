@@ -67,7 +67,10 @@ function Education() {
                             {education.title}
                           </p>
                           <p className="text-sm sm:text-base">{education.institution}</p>
+                          <p className="text-sm sm:text-base" style={{marginTop:"8px",marginLeft:"2px"}}>{education.percentage  }</p>
+
                         </div>
+                        
                       </div>
                     </div>
                   </GlowCard>

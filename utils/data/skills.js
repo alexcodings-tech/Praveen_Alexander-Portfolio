@@ -3,7 +3,6 @@ export const skillsData = [
   'CSS',
   'Javascript',
   'React',
-  'Node js',
   'Tailwind',
   'MongoDB',
   'MySQL',

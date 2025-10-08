@@ -12,17 +12,17 @@ function Footer() {
         </div>
         <div className="flex flex-col md:flex-row items-center justify-between">
           <p className="text-sm">
-            © Developer Portfolio by <Link target="_blank" href="https://www.linkedin.com/in/praveen-alexander-144038378/" className="text-[#16f2b3]">Praveen Alexander S</Link>
+            ©Portfolio of <Link target="_blank" href="https://www.linkedin.com/in/praveen-alexander-144038378/" className="text-[#16f2b3]">Praveen Alexander S</Link>
           </p>
           <div className="flex items-center gap-5">
-            <Link
+            {/* <Link
               target="_blank"
               href="https://github.com/alexcodings-tech/developer-portfolio"
               className="flex items-center gap-2 uppercase hover:text-[#16f2b3]"
             >
               <IoStar />
               <span>Star</span>
-            </Link>
+            </Link> */}
             {/* <Link
               target="_blank"
               href="https://github.com/said7388/developer-portfolio/fork"
