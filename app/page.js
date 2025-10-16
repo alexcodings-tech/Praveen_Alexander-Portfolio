@@ -6,17 +6,20 @@ import Experience from "./components/homepage/experience";
 import HeroSection from "./components/homepage/hero-section";
 import Projects from "./components/homepage/projects";
 import Skills from "./components/homepage/skills";
+import ClientWrapper from "./components/client-wrapper";
 
 export default function Home() {
   return (
-    <div suppressHydrationWarning >
-      <HeroSection />
-      <AboutSection />
-      <Experience />
-      <Skills />
-      <Projects />
-      <Education />
-      <ContactSection />
-    </div>
+    <ClientWrapper>
+      <div suppressHydrationWarning >
+        <HeroSection />
+        <AboutSection />
+        {/* <Experience /> */}
+        <Skills />
+        <Projects />
+        <Education />
+        <ContactSection />
+      </div>
+    </ClientWrapper>
   )
 };

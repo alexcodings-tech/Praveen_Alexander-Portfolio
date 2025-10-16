@@ -59,11 +59,11 @@ function Navbar() {
               <div className="text-sm text-white transition-colors duration-300 hover:text-pink-600">ABOUT</div>
             </a>
           </li>
-          <li>
+          {/* <li>
             <a className="block px-4 py-2 no-underline outline-none hover:no-underline" href="#experience" onClick={(e) => scrollToSection(e, 'experience')}>
               <div className="text-sm text-white transition-colors duration-300 hover:text-pink-600">EXPERIENCE</div>
             </a>
-          </li>
+          </li> */}
           <li>
             <a className="block px-4 py-2 no-underline outline-none hover:no-underline" href="#skills" onClick={(e) => scrollToSection(e, 'skills')}>
               <div className="text-sm text-white transition-colors duration-300 hover:text-pink-600">SKILLS</div>

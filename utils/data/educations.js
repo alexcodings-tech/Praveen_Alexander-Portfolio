@@ -11,13 +11,13 @@ export const educations = [
     title: "Higher Secondary Certificate",
     duration: "2021 - 2022",
     institution: "Velammal Vidhyashram Mambakkam (CBSE)",
-    percentage: "73.2%"
+    // percentage: "73.2%"
   },
   {
     id: 3,
     title: "Secondary School Certificate",
     duration: "2019 - 2020",
     institution: "Velammal Vidhyashram Mambakkam (CBSE)",
-    percentage: "100%"
+    // percentage: "100%"
   }
 ]
