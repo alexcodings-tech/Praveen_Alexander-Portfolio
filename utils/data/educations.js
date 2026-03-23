@@ -4,7 +4,7 @@ export const educations = [
     title: "Bachelor of Engineering (CSE)",
     duration: "2023 - 2027",
     institution: "Tagore Engineering College",
-    percentage: "8.87 CGPA (First class with Distinction)"
+    percentage: "8.93 CGPA (First class with Distinction)"
   },
   {
     id: 2,
