@@ -8,6 +8,7 @@ import Projects from "./components/homepage/projects";
 import Skills from "./components/homepage/skills";
 import ClientWrapper from "./components/client-wrapper";
 
+
 export default function Home() {
   return (
     <ClientWrapper>
@@ -19,6 +20,7 @@ export default function Home() {
         <Projects />
         <Education />
         <ContactSection />
+        <Blogs/>
       </div>
     </ClientWrapper>
   )
