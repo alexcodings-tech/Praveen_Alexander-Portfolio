@@ -7,7 +7,7 @@ import HeroSection from "./components/homepage/hero-section";
 import Projects from "./components/homepage/projects";
 import Skills from "./components/homepage/skills";
 import ClientWrapper from "./components/client-wrapper";
-
+import Blogs from "./components/homepage/blog";
 
 export default function Home() {
   return (
